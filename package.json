@@ -3,49 +3,45 @@
   "version": "0.5.14",
   "description": "A component that creates a breadcrumb trail for router paths",
   "scripts": {
-    "start": "tsc && concurrently \"npm run ngc\" \"npm run lite\" ",
-    "lite": "lite-server",
-    "tsc": "ngc -w",
-    "ngc": "ngc",
-    "build": "ngc",
-    "bundles": "ngc -m system --rootDir ./app --outFile ./bundles/ng2-breadcrumb.js",
-    "build:aot": "rimraf bundles && ngc -p tsconfig-aot.json"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "compile": "tsc -p ./",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/gmostert/ng2-breadcrumb.git"
   },
   "keywords": [
-    "angular2"
+    "angular"
   ],
   "author": "Gerhard Mostert",
   "license": "MIT",
   "main": "bundles/app.module.js",
   "typings": "bundles/app.module.d.ts",
   "dependencies": {
-    "@angular/common": "^4.0.1",
-    "@angular/core": "^4.0.1",
-    "@angular/http": "^4.0.1",
-    "@angular/platform-browser": "^4.0.1",
-    "@angular/platform-browser-dynamic": "^4.0.1",
-    "@angular/router": "^4.0.1",
+    "@angular/common": "^16.2.12",
+    "@angular/core": "^16.2.12",
+    "@angular/forms": "^16.2.12",
+    "@angular/platform-browser": "^16.2.12",
+    "@angular/platform-browser-dynamic": "^16.2.12",
+    "@angular/router": "^16.2.12",
+    "@types/ws": "^8.5.4",
     "bootstrap": "4.0.0-alpha.6",
-    "core-js": "2.4.1",
-    "reflect-metadata": "^0.1.9",
-    "rxjs": "^5.3.0",
-    "systemjs": "0.19.27",
-    "zone.js": "^0.8.5"
+    "rxjs": "^6.6.7",
+    "zone.js": "~0.13.3"
   },
   "devDependencies": {
-    "@angular/compiler": "^4.0.1",
-    "@angular/compiler-cli": "^4.0.1",
-    "@angular/platform-server": "^4.0.1",
-    "@types/core-js": "^0.9.35",
-    "@types/jasmine": "^2.5.40",
-    "@types/moment": "^2.13.0",
-    "@types/node": "^6.0.54",
+    "@angular-devkit/build-angular": "^16.2.12",
+    "@angular/compiler": "^16.2.12",
+    "@angular/compiler-cli": "^16.2.12",
+    "@angular/platform-server": "^16.2.12",
+    "@types/node": "^12.20.55",
     "concurrently": "^3.1.0",
     "lite-server": "^2.2.2",
-    "typescript": "^2.2.2"
+    "typescript": "~4.9.5"
   }
 }
